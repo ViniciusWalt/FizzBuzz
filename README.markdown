@@ -1,11 +1,11 @@
 # FizzBuzz Program
 
 ## Overview
-This C++ program implements the classic **FizzBuzz** problem, a popular coding exercise used in programming interviews and educational settings to assess fundamental programming skills. The program prompts the user to input a number `N` and then iterates from 1 to `N`, printing:
+This C++ program implements the classic **FizzBuzz** problem, a popular coding exercise used in programming interviews and educational settings to assess fundamental programming skills. The program prompts the user to input a positive integer `N` and iterates from 1 to `N`, printing:
 - "FizzBuzz" for numbers divisible by both 3 and 5,
 - "Fizz" for numbers divisible by 3,
 - "Buzz" for numbers divisible by 5,
-- The number itself if none of the above conditions are met.
+- The number itself if none of the above conditions apply.
 
 ## Code
 ```cpp
@@ -24,35 +24,46 @@ int main() {
     }
     // Pause the console before exiting (for Windows)
     cout << "Press Enter to exit...";
-    cin.ignore(); // clear buffer
-    cin.get(); // wait for input
+    cin.ignore(); // Clear input buffer
+    cin.get(); // Wait for user input
     return 0;
 }
 ```
 
 ## Importance in Programming
-The FizzBuzz program is significant in programming for several reasons:
+The FizzBuzz problem is widely used for several reasons:
 
-1. **Fundamental Concepts**: It introduces beginners to essential programming constructs such as:
-   - **Input/Output**: Using `cin` and `cout` for user interaction.
-   - **Loops**: The `for` loop to iterate over a range of numbers.
-   - **Conditional Statements**: Using `if`, `else if`, and `else` to implement logic based on divisibility.
-   - **Modulus Operator**: The `%` operator to check divisibility.
+1. **Fundamental Concepts**: Introduces beginners to core programming constructs:
+   - **Input/Output**: Using `cin` for input and `cout` for output.
+   - **Loops**: Iterating with a `for` loop over a range.
+   - **Conditional Statements**: Using `if`, `else if`, and `else` for logic.
+   - **Modulus Operator**: Checking divisibility with `%`.
 
-2. **Problem-Solving Skills**: FizzBuzz requires understanding how to combine multiple conditions (e.g., checking divisibility by both 3 and 5) and prioritizing them correctly, fostering logical thinking.
+2. **Logical Thinking**: Requires combining multiple conditions (e.g., divisibility by both 3 and 5) and prioritizing them correctly.
 
-3. **Interview Standard**: FizzBuzz is a common interview question to evaluate a candidate’s ability to write clean, functional code. It tests whether a programmer can handle basic control flow and produce correct output under simple constraints.
+3. **Interview Tool**: A standard question to assess a candidate’s ability to write clean, functional code under simple constraints.
 
-4. **Debugging and Edge Cases**: While simple, FizzBuzz encourages attention to detail, such as ensuring the correct order of conditions (checking for numbers divisible by both 3 and 5 before individual divisibility) to avoid logical errors.
+4. **Debugging Practice**: Encourages attention to detail, such as checking divisibility by both 3 and 5 before individual conditions to avoid logical errors.
 
-5. **Scalability**: The problem can be extended to include more complex conditions or larger datasets, making it a versatile exercise for learning optimization and scalability.
+5. **Scalability**: Can be extended with more complex conditions or larger datasets to explore optimization techniques.
 
 ## How to Run
-1. Compile the code using a C++ compiler (e.g., `g++ fizzbuzz.cpp -o fizzbuzz`).
-2. Run the executable (e.g., `./fizzbuzz` on Linux/Mac or `fizzbuzz.exe` on Windows).
+1. Compile the code using a C++ compiler:
+   ```bash
+   g++ FizzBuzz.cpp -o FizzBuzz
+   ```
+2. Run the executable:
+   - On Linux/Mac: `./FizzBuzz`
+   - On Windows: `FizzBuzz.exe`
 3. Enter a positive integer when prompted.
-4. The program will output the FizzBuzz sequence up to the input number.
-5. Press Enter to exit the program.
+4. The program outputs the FizzBuzz sequence up to the input number.
+5. On Windows, press Enter to exit the program.
 
 ## Platform Notes
-- The `cin.ignore()` and `cin.get()` lines are included to pause the console on Windows systems, ensuring the output is visible before the console closes. These can be removed for non-Windows environments if unnecessary.
+- The `cin.ignore()` and `cin.get()` lines pause the console on Windows to keep the output visible before the console closes. These lines can be removed for Linux or Mac environments if not needed.
+- The `.gitignore` file ensures that compiled binaries (e.g., `FizzBuzz.exe`) are excluded from version control.
+
+## Repository Contents
+- `FizzBuzz.cpp`: The C++ source code for the FizzBuzz program.
+- `README.markdown`: This documentation.
+- `.gitignore`: Excludes compiled binaries like `FizzBuzz.exe`.
